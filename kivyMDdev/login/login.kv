@@ -1,0 +1,229 @@
+<Screens>:
+    LoginScreen:
+    Home:
+    CyberSec:
+    Create_Account:
+##########################################################################################
+#
+#LoginScreen SCREEN
+#
+#
+#
+#
+#
+##########################################################################################
+<LoginScreen>
+    name:"Login"
+    MDCard:
+        size_hint:None,None
+        size:300,500
+        orientation:"vertical"
+        pos_hint:{"center_x":0.5,"center_y":0.5}
+        elevation:10
+        padding:20
+        spacing:25
+
+        MDLabel:
+            id:welcome_label
+            text:"KARU DEVELOPER PLATFORM"
+            color:(1,1,0,1)
+            halign:"center"
+        MDTextFieldRound:
+            id:user
+            hint_text:"username"
+            icon_right:"account"
+            size_hint_x:None
+            width:220
+            pos_hint:{"center_x":0.5}
+        MDTextFieldRound:
+            id:password
+            password:True
+            hint_text:"password"
+            icon_right:"eye-off"
+            size_hint_x:None
+            width:220
+            pos_hint:{"center_x":0.5}
+        MDRoundFlatButton:
+            id:login
+            text:"login"
+            pos_hint:{"center_x":0.5}
+            on_press:root.login()
+        MDRoundFlatButton:
+            id:create_account
+            text:"create account"
+            pos_hint:{"center_x":0.5}
+            on_press:root.manager.current="Create_Account"
+        MDLabel:
+            size_hint_y:None
+            height:20
+
+##########################################################################################
+#
+#Create_Account Screen
+#
+#
+#
+#
+#
+##########################################################################################
+<Create_Account>
+    name:"Create_Account"
+    MDCard:
+        size_hint:None,None
+        size:300,500
+        orientation:"vertical"
+        pos_hint:{"center_x":0.5,"center_y":0.5}
+        elevation:10
+        padding:20
+        spacing:25
+
+        MDLabel:
+            id:welcome_label
+            text:"KARU DEVELOPER PLATFORM"
+            color:(1,1,0,1)
+            halign:"center"
+        MDLabel:
+            id:create_account_label
+            text:"CREATE ACCOUNT"
+            color:(1,1,0,1)
+            halign:"center"
+        MDTextFieldRound:
+            id:user
+            hint_text:"username"
+            icon_right:"account"
+            size_hint_x:None
+            width:220
+            pos_hint:{"center_x":0.5}
+        MDTextFieldRound:
+            id:password
+            password:True
+            hint_text:"password"
+            icon_right:"eye-off"
+            size_hint_x:None
+            width:220
+            pos_hint:{"center_x":0.5}
+        MDTextFieldRound:
+            id:confirm_password
+            password:True
+            hint_text:"confirm password"
+            icon_right:"eye-off"
+            size_hint_x:None
+            width:220
+            pos_hint:{"center_x":0.5}
+        MDTextFieldRound:
+            id:email
+            hint_text:"email"
+            icon_right:"email"
+            size_hint_x:None
+            width:220
+            pos_hint:{"center_x":0.5}
+        MDTextFieldRound:
+            id:programme
+            hint_text:"programme"
+            icon_right:"programme"
+            size_hint_x:None
+            width:220
+            pos_hint:{"center_x":0.5}
+        MDRoundFlatButton:
+            id:create_account
+            text:"create account"
+            pos_hint:{"center_x":0.5}
+            on_press:root.create_account()
+
+
+##########################################################################################
+#
+#Home Screen
+#
+#
+#
+#
+#
+##########################################################################################
+<Home>:
+    name:"home"
+    MDBoxLayout:
+        orientation:"vertical"
+        MDToolbar:
+            title:"KARU developer platform"
+            left_action_items:[["menu"]]
+        MDBottomNavigation:
+        
+            MDBottomNavigationItem:
+                name:"winners"
+                text:"winner"
+                MDLabel:
+                    text:"project winners will be listed here"
+                    halign:"center"
+            MDBottomNavigationItem:
+                name:"announcements"
+                text:"announcement"
+                MDLabel:
+                    text:"all announcement and upadates will be available here"
+                    halign:"center"
+            MDBottomNavigationItem:
+                name:"projects"
+                text:"project"
+                #MDLabel:
+                    #text:"All projects will be listed here "
+                    #halign:"center"
+                ###############################################################
+                #
+                #
+                #projects
+                #
+                #
+                ##############################################################
+                MDBoxLayout:
+                    orientation:"vertical"
+                    MDRectangleFlatButton:
+                        text:"1.cyber security"+" "*3000
+                        on_press:root.project("cyber security")
+                    MDRectangleFlatButton:
+                        text:"2. web development"+" "*3000
+                    MDRectangleFlatButton:
+                        text:"3. Networking"+" "*3000
+                    MDRectangleFlatButton:
+                        text:"4.Data structure and Algorithms"+" "*3000
+                    ###################################################
+                    MDRectangleFlatButton:
+                        text:"5.cyber security"+" "*3000
+                    MDRectangleFlatButton:
+                        text:"6. web development"+" "*3000
+                    MDRectangleFlatButton:
+                        text:"7. Networking"+" "*3000
+                    MDRectangleFlatButton:
+                        text:"8.Data structure and Algorithms"+" "*3000
+                        
+                    MDRectangleFlatButton:
+                        text:"9.cyber security"+" "*3000
+                    MDRectangleFlatButton:
+                        text:"10. web development"+" "*3000
+                    MDRectangleFlatButton:
+                        text:"11. Networking"+" "*3000
+                    MDRectangleFlatButton:
+                        text:"12.Data structure and Algorithms"+" "*3000
+                    MDRectangleFlatButton:
+                        text:"13. Networking"+" "*3000
+##########################################################################################
+#
+#cyber security project Screen
+#
+#
+#
+#
+#
+##########################################################################################
+
+<CyberSec>:
+    name:"CyberSec"
+    MDBoxLayout:
+        orientation:"vertical"
+        MDToolbar:
+            title:"KARU developer platform"
+            left_action_items:[["menu"]]
+        MDLabel:
+            text:"cyber security projects"
+            halign:"center"
+        MDRectangleFlatButton:
+            text:"1.List all the vulnerability in the server identified by the following public IP adress 48.23.45.66"+" "*300

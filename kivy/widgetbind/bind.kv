@@ -1,0 +1,17 @@
+<win1>:
+    BoxLayout:
+        orientation:"vertical"
+        size:root.height,root.width
+        padding:100
+        pos_hint: {'center_x':.5, 'center_y': .4}
+        Label:
+            id:bindLabel1
+            text:bindTextInput.text
+        TextInput:
+            id:bindTextInput
+            text:"type your in the textinput below to update this label"
+        Button:
+            id:'btn1'
+            text:"execute"
+            on_release:root.execute()
+        

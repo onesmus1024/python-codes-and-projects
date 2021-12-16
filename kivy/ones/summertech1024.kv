@@ -1,0 +1,21 @@
+<win1>:
+    BoxLayout:
+        size:root.width,root.height
+        padding:50
+        orientation:"vertical"
+        Label:
+            text:"username"
+            index:1
+        TextInput:
+            id:username
+            font_size:20
+            index:0
+        Label:
+            text:"password"
+        TextInput:
+            id:password
+            font_size:20
+            password:True
+        Button:
+            text:"login"
+            on_release:root.animate_it(self)

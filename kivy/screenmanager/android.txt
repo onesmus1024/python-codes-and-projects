@@ -1,0 +1,3 @@
+title=onesAApp
+author=ones
+orientation=portrait|landscape

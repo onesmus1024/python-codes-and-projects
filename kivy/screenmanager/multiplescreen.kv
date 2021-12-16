@@ -1,0 +1,29 @@
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+<ScreenManager1>:
+    FirstScreen:
+    SecondScreen:
+
+
+<FirstScreen>:
+    name:"FirstScreen"
+    transition:"FadeTransition"
+    BoxLayout:
+        orientation:"vertical"
+        Label:
+            text:"i am in first Screen"
+        Button:
+            text:"go to Second Screen"
+            on_release:
+                root.manager.transition.direction="left"
+                root.manager.current="SecondScreen"
+
+
+<SecondScreen>:
+    name:"SecondScreen"
+    BoxLayout:
+        orientation:"vertical"
+        Label:
+            text:"i am in Second Screen"
+        Button:
+            text:"go to first Screen"
+            on_release:root.manager.current="FirstScreen"

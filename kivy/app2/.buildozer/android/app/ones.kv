@@ -1,0 +1,19 @@
+GridLayout:
+    canvas.before:
+        Color:
+            rgba: 0.5, 0.5, 0, 1
+        Rectangle: # self here refers to the widget i.e FloatLayout
+            pos: self.pos
+            size: self.size
+    cols:1
+    Label:
+        id:onesLabel
+        text:"enter your username"
+    TextInput:
+        id:onesTextinput1
+        multiline:False
+    Button:
+        text:"submit"
+        on_press:
+            onesLabel.text = "this is what you typed"
+

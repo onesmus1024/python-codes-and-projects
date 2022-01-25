@@ -43,4 +43,5 @@ q1.enqueue(40)
 
 q1.display()
 q1.dequeue()
+q1.dequeue()
 q1.display()

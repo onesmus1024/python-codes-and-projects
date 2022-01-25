@@ -6,3 +6,4 @@ diff =datetime.timedelta(days=20)
 future=today+diff
 
 print("now = {},\n today={},\n future = {}".format(now,today,future))
+

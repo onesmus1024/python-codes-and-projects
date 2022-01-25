@@ -1,8 +1,8 @@
 import pandas as pd
-import matplotlib as plt
-import tensorflow as tf
+import matplotlib.pyplot as plt
 #create a dataframe
 df = pd.DataFrame({'name':['ones','yvonne'],'age':[12,34],'RegNo':['p101','B109'],'marks':[100,300]})
+df.plot()
 print(df.head(3))
 print("-"*100)
 print(df['age'].max())

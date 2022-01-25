@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style={text-align:'center'}>
+    <h3>product will appear here</h3>
+    {%if object_list %}
+        {% for Product in object_list %}
+            {{Product.name}}
+            {{Product.description}}
+            <img src="{{ Product.image.url }}" width=200 height=200/>
+            {{product.category}}
+        {% endfor %}
+    {% else %}
+      <h3>No product</h3>
+    {% endif %}
+</body>
+</html>

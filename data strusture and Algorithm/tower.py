@@ -1,5 +1,4 @@
 # Recursive Python function to solve the tower of hanoi
-
 def TowerOfHanoi(n , source, destination, auxiliary):
 	if n==1:
 		print ("Move disk 1 from source",source,"to destination",destination)
@@ -9,8 +8,6 @@ def TowerOfHanoi(n , source, destination, auxiliary):
 	TowerOfHanoi(n-1, auxiliary, destination, source)
 		
 # Driver code
-n = 3
+n =int(input("enter number of disk>>"))
 TowerOfHanoi(n,'s','d','a')
-# A, C, B are the name of rods
-
-# Contributed By Dilip Jain
+# A, C, B are the name of rod
